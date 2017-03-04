@@ -4,6 +4,14 @@
 		<title>Mike Gao Whitestone Alphapup Contest Entry</title>
 		<meta charset="utf-8">
 		<style type="text/css">
+		img {
+			    position: absolute;
+			    margin: auto;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			}
 			body {
 				background: #000;
 				color: #999;
@@ -476,11 +484,17 @@
 			var textureCamera, mainCamera;
 			
 			var events = new Events();
+			
+			function startIt() {
+				
+			document.getElementById('startBtn').style.display='none';
 			AudioHandler.init();
 		    ControlsHandler.init();
 			init();
 			animate();
-
+			}
+			
+			
 			function init() {
 
 
@@ -1117,6 +1131,6 @@
 			}
 
 		</script>
-
+ <img onclick="startIt();" src="textures/Play@2x.png" valign="center" align="center" id="startBtn"/>
 	</body>
 </html>
