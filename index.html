@@ -878,7 +878,7 @@
 
 				var texture, material, plane;
 				
-				texture = THREE.ImageUtils.loadTexture( "textures/MGLANDESCAPE.png" );
+				texture = THREE.ImageUtils.loadTexture( "textures/MGLANDESCAPE.jpg" );
 								
 				
 				// how many times to repeat in each direction; the default is (1,1),
@@ -1046,7 +1046,7 @@
 					textureCamera.lookAt(sphere.position);
 					camera.lookAt(lookPlace.position);
 					
-					for ( var i = 1, l = triangles.length; i < l; i ++ ) {
+					for ( var i = 0, l = triangles.length; i < l; i ++ ) {
 
 						triangles[ i ].lookAt( sphere.position );
 						triangles[i].position.y = triangles[i].position.y - (20*daLevel);
@@ -1062,10 +1062,10 @@
 					
 					events.emit("update");
 					
-						for ( var i = 1, l = planes.length; i < l; i ++ ) {
+						for ( var i = 0, l = planes.length; i < l; i ++ ) {
 							planes[i].rotation.z = Math.sin(1.033333333333*2*Math.PI*AudioHandler.level);
 							planes[i].rotation.y = daLevel * 2 * Math.PI;
-							
+							planes[i].material.opacity = daLevel;
 					
 					}
 					
