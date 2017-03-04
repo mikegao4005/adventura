@@ -279,6 +279,7 @@ var AudioHandler = function() {
 		
 		level = sum / levelsCount;
 		daLevel += (level - daLevel)*0.2;
+		hiLevel += (levelsData[10] - hiLevel)*0.2;
 		levelHistory.push(level);
 		levelHistory.shift(1);
 
